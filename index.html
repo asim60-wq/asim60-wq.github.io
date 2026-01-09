@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moleküler Biyoloji ve Genetik Portfolyo | Muhammed Asım Şen</title>
+    <style>
+        /* GENEL AYARLAR */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0f172a; /* Çok koyu lacivert/gri (Bilimsel tema) */
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        
+        /* HEADER */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background-color: #1e293b;
+            border-bottom: 1px solid #334155;
+        }
+
+        /* Logo Rengi: DNA Yeşili */
+        .logo { font-size: 1.5rem; font-weight: bold; color: hsl(261, 64%, 52%); }
+        
+        nav ul { display: flex; list-style: none; gap: 20px; }
+        nav a:hover { color: hsl(239, 64%, 52%); transition: 0.3s; }
+
+        /* HERO (GİRİŞ) */
+        .hero {
+            height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            background: radial-gradient(circle at center, #1e293b 0%, #0f172a 70%);
+        }
+
+        .hero h1 { font-size: 3.5rem; margin-bottom: 15px; line-height: 1.2; }
+        .hero span { color: hsl(216, 83%, 54%); display: block; font-size: 0.6em; margin-top: 10px; opacity: 0.9; letter-spacing: 2px;}
+        .hero p { font-size: 1.2rem; color: #94a3b8; max-width: 650px; margin-bottom: 30px; }
+        
+        .btn {
+            background-color: hsl(158, 100%, 86%);
+            color: #064e3b;
+            padding: 12px 30px;
+            border-radius: 50px; /* Daha yuvarlak, modern buton */
+            font-weight: bold;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(52, 211, 153, 0.3);
+        }
+        .btn:hover { background-color: #10b981; transform: translateY(-2px); }
+
+        /* BÖLÜMLER */
+        .section { padding: 80px 10%; }
+        .section-title { text-align: center; font-size: 2.2rem; margin-bottom: 50px; color: #f1f5f9; }
+        .section-title span { border-bottom: 3px solid hsl(214, 64%, 52%); padding-bottom: 10px; }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background-color: #1e293b;
+            padding: 25px;
+            border-radius: 15px;
+            transition: 0.3s;
+            border: 1px solid #334155;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover { transform: translateY(-7px); border-color: hsl(214, 81%, 60%); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+        .card h3 { margin-bottom: 15px; color: #fff; font-size: 1.4rem; }
+        .card p { color: #cbd5e1; font-size: 0.95rem; margin-bottom: 20px; }
+        
+        .tag-container { display: flex; gap: 10px; margin-bottom: 15px; flex-wrap: wrap;}
+        .tag { font-size: 0.75rem; background: #334155; padding: 5px 10px; border-radius: 5px; color: lab(98.77% 0.67 0.22); }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #1e293b;
+            color: #64748b;
+            margin-top: 50px;
+            border-top: 1px solid #334155;
+        }
+
+        /* MOBİL */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .section { padding: 60px 5%; }
+            header { flex-direction: column; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Hoş geldiniz.</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Hakkımda</a></li>
+                <li><a href="#skills">Yetenekler</a></li>
+                <li><a href="#projects">Projeler</a></li>
+                <li><a href="#contact">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>Muhammed Asım Şen <br> <span>MOLEKÜLER BİYOLOJİ VE GENETİK LİSANS DERECESİ</span></h1>
+        <p>Laboratuvar tekniklerini biyoinformatik analizlerle birleştiriyorum. Kanser genetiği,Biyoteklonoji ve Veri analizi üzerine çalışıyorum.</p>
+        <a href="#projects" class="btn">Çalışmalarımı Gör</a>
+    </section>
+
+    <section class="section" id="skills">
+        <h2 class="section-title"><span>Uzmanlık Alanlarım</span></h2>
+        <div class="projects-grid" style="text-align: center;">
+            <div class="card" style="align-items: center;">
+                <h3 style="color:#3479d3;">🧫 Laboratuvar Deneyimi</h3>
+                <p>PCR, Western Blot, Bradford Assay, Jel Elektroforezi, Hücre Kültürü, Pipetleme teknikleri ve Mikroskopi konusunda deneyimliyim.</p>
+            </div>
+            <div class="card" style="align-items: center;">
+                <h3 style="color:#3479d3;">💻 Biyoinformatik</h3>
+                <p>Python ve R dilleri ile sekans analizi, BLAST taramaları ve protein yapı modellemesi üzerine kendimi geliştirmekteyim</p>
+            </div>
+            <div class="card" style="align-items: center;">
+                <h3 style="color:#3479d3;">📑 Araştırma</h3>
+                <p>Akademik makale tarama, literatür özeti çıkarma ve bilimsel sunum hazırlama.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="projects">
+        <h2 class="section-title"><span>Projeler ve Stajlar</span></h2>
+        <div class="projects-grid">
+            
+            <div class="card">
+                <div>
+                    <h3>Bitirme Projesi / Araştırma</h3>
+                    <div class="tag-container">
+                        <span class="tag">Biyoteklonoji</span>
+                        <span class="tag">Fungi</span>
+                    </div>
+                    <p>C.neoformans ve C.sphermum'un uzaydaki dayanıklılığı üzerine literatür taraması ve proje tasarımı.(Yayınlanmadı)</p>
+                </div>
+                <a href="#" style="color:#b4cceb; font-size:0.9rem; font-weight:bold;">Detayları İncele →</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <h3>Python ile Laboratuvar Asistanı</h3>
+                    <div class="tag-container">
+                        <span class="tag">Python</span>
+                        <span class="tag">Veri Analizi</span>
+                        <span class="tag">Biyoinformatik</span>
+                    </div>
+                    <p>NCBI veritabanından çekilen gen dizilimlerinin protein analizi ve primer tasarımı ile birlikte diğer laboratuvar çözümlerini bir araya getirdiğim script yazdım.</p>
+                </div>
+                <a href="#" style="color:#b4cceb; font-size:0.9rem; font-weight:bold;">GitHub Linki →</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <h3>Zorunlu Laboratuvar Stajı</h3>
+                    <div class="tag-container">
+                        <span class="tag">Staj</span>
+                        
+                    </div>
+                    <p>Staj Aramaktayım.</p>
+                </div>
+                <a href="#" style="color:#b4cceb; font-size:0.9rem; font-weight:bold;">Staj Defteri / Rapor →</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section" style="text-align: center;" id="contact">
+        <h2 class="section-title"><span>İletişim</span></h2>
+        <p style="margin-bottom: 20px; color:#94a3b8;">Akademik işbirlikleri veya staj fırsatları için bana ulaşabilirsiniz.</p>
+        <a href="mailto:mailadresin@gmail.com" class="btn">sen60asim@gmail.com</a>
+        <br><br>
+        <p style="font-size: 0.9rem;">
+            <a href="#" style="margin: 0 10px; color:#fff;">LinkedIn</a> | 
+            <a href="#" style="margin: 0 10px; color:#fff;">ResearchGate</a> | 
+            <a href="#" style="margin: 0 10px; color:#fff;">GitHub</a>
+        </p>
+    </section>
+
+    <footer>
+        <p>© 2026 Muhammed Asım Şen | Bilimle Kalın 🧬</p>
+    </footer>
+
+</body>
+</html>
