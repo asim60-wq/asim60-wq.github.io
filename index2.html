@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>MBG Portfolio | Doğanın Kodu</title>
+    <style>
+        /* Tasarımın kalbi burası */
+        body {
+            background-color: #f4f7f1; /* Soft krem/yeşil arka plan */
+            font-family: 'Segoe UI', sans-serif;
+            color: #2d3436;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        /* Çerçeveler (Kartlar) */
+        .card {
+            background: #ffffff;
+            border: 2px solid #a8c69f; /* İnce yeşil çerçeve */
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+            position: relative; /* Yaprakları üzerine sabitlemek için */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        /* Köşelerden sarkan yapraklar */
+        .card::before {
+            content: '🌿'; /* Sol üst yaprak */
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            font-size: 30px;
+            transform: rotate(-15deg);
+        }
+
+        .card::after {
+            content: '🍃'; /* Sağ alt yaprak */
+            position: absolute;
+            bottom: -15px;
+            right: 15px;
+            font-size: 25px;
+            transform: rotate(10deg);
+        }
+
+        .project-title {
+            color: #3e5c36;
+            border-bottom: 1px dashed #a8c69f;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .skills {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .tag {
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        h1 { color: #2d5a27; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>Moleküler Biyoloji ve Genetik</h1>
+            <p>Laboratuvardan kod satırlarına uzanan bir yolculuk.</p>
+        </div>
+
+        <div class="card">
+            <h2 class="project-title">Genomik Veri Madenciliği</h2>
+            <p>Büyük ölçekli sekans verilerinin analizi ve mutasyon varyantlarının tespiti üzerine yaptığım çalışmalar. Python ve R ekosistemini kullanarak biyolojik veriyi anlamlandırıyorum.</p>
+            <div class="skills">
+                <span class="tag">#Bioinformatics</span>
+                <span class="tag">#Python</span>
+                <span class="tag">#Genetics</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 class="project-title">Viroloji ve Hücre Kültürü</h2>
+            <p>Virüs replikasyon mekanizmaları ve antiviral direnç üzerine laboratuvar simülasyonları ve ıslak laboratuvar tecrübelerim.</p>
+            <div class="skills">
+                <span class="tag">#Virology</span>
+                <span class="tag">#WetLab</span>
+                <span class="tag">#MolecularBiology</span>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
